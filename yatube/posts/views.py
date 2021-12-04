@@ -7,3 +7,6 @@ def index(request):
 def group_posts(request):
     return HttpResponse("Тут будем выкладывать посты, ожидайте...")
 
+def group_posts_slug(request, slug):
+    return HttpResponse("Да выложим мы посты, выложим!!!")
+
