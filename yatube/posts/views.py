@@ -1,15 +1,15 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from .models import Post
 
 # Create your views here.
 def index(request):
-    template = 'posts/index.html'
-    text = "Это главная страница проекта Yatube"
+    posts = Post.objects.order_by('-pub_date')[:10]
     context = {
-        'title': "Главная страница",
-        'text': text, 
+        'title': 'Главная страница',
+        'posts': posts,
     }
-    return render(request, template, context)
+    return render(request, 'posts/index.html', context)
 
 def group_list(request):
     template = 'posts/group_list.html'
