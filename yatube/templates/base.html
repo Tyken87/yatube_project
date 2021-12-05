@@ -16,9 +16,9 @@
     <title>Последние обновления на сайте</title>
   </head>
   <body>
-    <header>
-        {% include 'includes/header.html' %}  
-    </header>
+      
+    {% include 'includes/header.html' %}  
+    
     <main>
         {% block content %}
             Возьмём контект из дочернего блока
@@ -28,7 +28,7 @@
     <!-- border-top: создаёт тонкую линию сверху блока -->
     <!-- text-center: выравнивает текстовые блоки внутри блока по центру -->
     <!-- py-3: контент внутри размещается с отступом сверху и снизу -->         
-    <footer>
-        {% include 'includes/footer.html' %}
-    </footer>
+    
+    {% include 'includes/footer.html' %}
+    
   </body>
